@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AES Forge</title>
+  <link href="https://fonts.googleapis.com/css2?family=Balthazar&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="css/contatti.css">
+
+
+
+
+
+
+</head>
+<body>
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar">
+   
+
+    <a href="index.html" class="logo">
+      <img src="img/AES_FORGE-removebg-preview.png" alt="Logo" />
+    </a>
+
+    
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="custom.html">Custom</a></li>
+      
+      <li><a href="contatti.html">Contatti</a></li>
+
+    </ul>
+  </nav>
+  
+
+  <!-- Hero -->
+  <section id="hero2">
+    <div class="hero2-overlay"></div>
+    <div class="hero2-content">
+      <h1>Contatti</h1>
+    </div>
+  </section>
+  
+
+  <!-- Contenuto -->
+
+
+
+ 
+  <section class="contact-section">
+    <!-- Sezione contatti diretti -->
+    <div class="contact-top">
+      <div class="contact-item">
+        <img src="img/icons8-nuovo-messaggio-100.png" alt="Email" class="icon-img">
+        <p>tuaemail@example.com</p>
+      </div>
+      <div class="contact-item">
+        <img src="img/ig100.png" alt="Instagram" class="icon-img">
+        <p>@tuoprofilo</p>
+      </div>
+    </div>
+  
+ 
+    <!-- Form contatto -->
+    <div class="contact-form">
+      <form action="#" method="post" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="Nome" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" rows="5" placeholder="Messaggio" required></textarea>
+        <label for="file-upload" class="file-label">Allega un file (opzionale)</label>
+        <input type="file" id="file-upload" name="file">
+        <button type="submit">INVIA</button>
+      </form>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+  <section id="gallery-cta">
+    <div class="cta-overlay"></div>
+    <div class="cta-content">
+      <h2>Vuoi un pezzo unico?</h2>
+      <p>Scopri come funziona la personalizzazione e visita il mio shop per trovare creazioni fatte a mano con passione.</p>
+      <a href="custom.html" class="cta-button">Regole della personalizzazione</a>
+      <a href="contatti.html" class="cta-button secondary">Vai allo Shop</a>
+    </div>
+  </section>
+  
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+  <!-- Sezione superiore -->
+  <div class="footer-top">
+    <div class="footer-left">
+      <a href="#"><img src="img/AES_FORGE-removebg-preview.png" alt="Logo"></a>
+    </div>
+    <div class="footer-right">
+      <a href="mailto:info@tuosito.com" class="footer-mail">fgknives@gmail.com</a>
+      <div class="social-buttons">
+        <a href="#"><img src="img/ig50.png" alt="Instagram"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sezione inferiore -->
+  
+</footer>
+<div class="footer-bottom">
+    <p>© 2025 Aes Forge. Tutti i diritti riservati.</p>
+  </div>
+
+  
+  
+
+  <a href="#" id="back-to-top" title="Torna su">↑</a>
+  <script>
+    const backToTopButton = document.getElementById('back-to-top');
+  
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) { // mostra il pulsante dopo 200px di scroll
+        backToTopButton.style.display = 'block';
+      } else {
+        backToTopButton.style.display = 'none';
+      }
+    });
+  
+    backToTopButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // scorrimento morbido
+      });
+    });
+  </script>
+  
+
+</body>
+</html>
