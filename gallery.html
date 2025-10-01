@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AES Forge</title>
+  <link href="https://fonts.googleapis.com/css2?family=Balthazar&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="css/gallery.css">
+
+
+
+
+
+
+</head>
+<body>
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar">
+   
+
+    <a href="index.html" class="logo">
+      <img src="img/AES_FORGE-removebg-preview.png" alt="Logo" />
+    </a>
+
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="custom.html">Custom</a></li>
+      
+      <li><a href="contatti.html">Contatti</a></li>
+
+    </ul>
+  </nav>
+  
+
+  <!-- Hero -->
+  <section id="hero2">
+    <div class="hero2-overlay"></div>
+    <div class="hero2-content">
+      <h1>Gallery</h1>
+    </div>
+  </section>
+  
+
+  <!-- Contenuto -->
+
+  <section id="gallery">
+    <div class="filter-buttons">
+      <button data-filter="all">Tutti</button>
+      <button data-filter="coltelli">Coltelli</button>
+      <button data-filter="gioielli">Artigianato</button>
+    </div>
+  
+    <div class="gallery-container">
+      <!-- Coltelli -->
+      <div class="gallery-item coltelli" style="background-image: url('img/lavori/coltello1.webp');"></div> 
+      <div class="gallery-item coltelli" style="background-image: url('img/lavori/coltello2.webp');"></div>
+      <div class="gallery-item coltelli" style="background-image: url('img/lavori/coltello3.webp');"></div>
+      <div class="gallery-item coltelli" style="background-image: url('img/lavori/coltello4.webp');"></div>
+      <div class="gallery-item coltelli" style="background-image: url('img/lavori/coltello5.webp');"></div>
+      <div class="gallery-item coltelli" style="background-image: url('img/lavori/coltello6.webp');"></div>
+      <div class="gallery-item coltelli" style="background-image: url('img/lavori/coltello7.webp');"></div>
+      <div class="gallery-item coltelli" style="background-image: url('img/lavori/coltello9.webp');"></div>
+      <div class="gallery-item coltelli" style="background-image: url('img/lavori/coltello8.webp');"></div>
+      <div class="gallery-item coltelli" style="background-image: url('img/lavori/coltello10.webp');"></div>
+      
+  
+      <!-- Gioielli -->
+      <div class="gallery-item gioielli" style="background-image: url('img/lavori/collana1.webp');"></div>
+      <div class="gallery-item gioielli" style="background-image: url('img/lavori/collana2.webp');"></div>
+      <div class="gallery-item gioielli" style="background-image: url('img/lavori/collana3.webp');"></div>
+      <div class="gallery-item gioielli" style="background-image: url('img/lavori/collana4.webp');"></div>
+    </div>
+  </section>
+  
+  <script>
+    // seleziono tutti i bottoni filtro
+    const filterButtons = document.querySelectorAll('.filter-buttons button');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+  
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const filter = button.getAttribute('data-filter');
+  
+        // togli la classe active da tutti i bottoni
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+  
+        // mostra/nascondi i gallery items
+        galleryItems.forEach(item => {
+          if (filter === 'all') {
+            item.style.display = 'block';
+          } else {
+            if (item.classList.contains(filter)) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          }
+        });
+      });
+    });
+  </script>
+  
+ 
+ <section id="gallery-cta">
+  <div class="cta-overlay"></div>
+  <div class="cta-content">
+    <h2>Vuoi un progetto su misura?</h2>
+    <p>Contattaci e realizzeremo insieme la tua creazione artigianale.</p>
+    <a href="custom.html" class="cta-button">Personalizza il tuo progetto</a>
+    <a href="contatti.html" class="cta-button secondary">Contattaci</a>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <!-- Sezione superiore -->
+  <div class="footer-top">
+    <div class="footer-left">
+      <a href="#"><img src="img/AES_FORGE-removebg-preview.png" alt="Logo"></a>
+    </div>
+    <div class="footer-right">
+      <a href="mailto:info@tuosito.com" class="footer-mail">fgknives@gmail.com</a>
+      <div class="social-buttons">
+        <a href="#"><img src="img/ig50.png" alt="Instagram"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sezione inferiore -->
+  
+</footer>
+<div class="footer-bottom">
+    <p>© 2025 Aes Forge. Tutti i diritti riservati.</p>
+  </div>
+
+  
+  
+
+  <a href="#" id="back-to-top" title="Torna su">↑</a>
+  <script>
+    const backToTopButton = document.getElementById('back-to-top');
+  
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) { // mostra il pulsante dopo 200px di scroll
+        backToTopButton.style.display = 'block';
+      } else {
+        backToTopButton.style.display = 'none';
+      }
+    });
+  
+    backToTopButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // scorrimento morbido
+      });
+    });
+  </script>
+  
+
+</body>
+</html>

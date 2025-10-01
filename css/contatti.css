@@ -1,0 +1,366 @@
+ /* Reset */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Balthazar', serif;
+    color: white;
+    
+   
+  }
+
+  /* Navbar */
+  .navbar {
+    position: absolute; /* si sovrappone all’hero */
+    margin-top: 20px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: transparent; /* trasparente sopra l’immagine */
+    z-index: 10; /* sopra l’hero */
+  }
+/* Logo */
+.navbar .logo img {
+  height: 100px; /* regola l'altezza a piacere */
+  width: auto;
+}
+
+
+/* Lista link */
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin-left: auto; /* spinge tutta la lista a destra */
+  padding: 0;
+}
+
+.navbar .nav-links li a {
+  text-decoration: none;
+  color: #fff; /* bianchi per risaltare sopra l’hero */
+  font-weight: 600;
+  font-size: 21px;
+  transition: color 0.3s ease;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5); /* migliora leggibilità */
+}
+
+.navbar .nav-links li a:hover {
+  color:#ee7700; /* effetto elegante hover */
+}
+
+
+
+  
+  
+
+  /* Hero2 */
+  #hero2 {
+    position: relative;
+    height: 500px; /* aumenta l'altezza per essere sicura che sia visibile */
+    background-image: url('../img/hero.webp'); /* assicurati che il percorso sia corretto */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .hero2-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.587); /* overlay scuro */
+    z-index: 1;
+  }
+  
+  .hero2-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero2-content h1 {
+    font-size: 3rem;
+    margin: 0;
+    line-height: 1.2;
+  }
+  
+
+  /* Contenuto dopo l'hero */
+
+
+.contact-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    font-family: sans-serif;
+  }
+  
+  /* Contatti diretti in alto */
+  .contact-top {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    background-color: #1a1a1a;
+    padding: 40px 20px;
+ color: #ffffff;
+ margin-bottom: 1px;
+    
+  
+  }
+  
+  .contact-item {
+    text-align: center;
+  }
+  
+  .contact-item img.icon-img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-item p {
+    margin: 0;
+    font-size: 1rem;
+    color:#686868;
+  }
+  
+  /* Linea divisoria */
+
+  
+  /* Form contatto */
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 60px 40px ;
+  }
+  
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea,
+  .contact-form input[type="file"] {
+    padding: 14px;
+    border: 1px solid #ccc;
+    
+    font-size: 1rem;
+    width: 100%;
+    transition: all 0.3s;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: #ee7700;
+    box-shadow: 0 0 6px rgba(59,122,87,0.3);
+  }
+  
+  .file-label {
+    font-weight: 500;
+    color: #ffffff;
+  }
+  
+  .contact-form button {
+    padding: 16px;
+    background-color: #ee7700;
+    color: #fff;
+    font-size: 1.2rem;
+    width: 100px;
+    border: none;
+    cursor: pointer;
+    margin: 0 auto;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 10px;
+  }
+  
+  .contact-form button:hover {
+    background-color: #944c03;
+    transform: translateY(-2px);
+  }
+
+  
+  
+
+
+
+
+
+  #gallery-cta {
+    position: relative;
+    height: 400px; /* regola l'altezza a piacere */
+    background-image: url('../img/view-molten-metal-red-hot-075167956_prevstill.webp'); /* sostituisci con la tua foto */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+  }
+  
+  .cta-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(26, 25, 25, 0.633); /* overlay semitrasparente */
+    z-index: 1;
+  }
+  
+  .cta-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 18px 36px;
+    margin: 0 10px;
+    background-color: #ee7700;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.3s;
+  }
+  
+  .cta-button.secondary {
+    background-color: #ee7700;
+  }
+  
+  .cta-button:hover {
+    background-color: #944c03;
+    
+  }
+  
+  
+
+  
+
+
+  /* footer */
+
+  .footer {
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+    font-family: 'Arial', sans-serif;
+    padding: 50px 60px;
+    font-size: 16px;
+    height: 200px;
+  }
+  
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* centra verticalmente logo e contenuti */
+    height: 100%; /* fa sì che occupi tutta l’altezza disponibile */
+  }
+  .footer-left img {
+    height: 160px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+   z-index: 30px;
+  }
+  
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+    margin-right: 30px;
+  }
+  
+  .footer-mail {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s, transform 0.3s;
+    margin-bottom: 20px;
+  }
+  
+  .footer-mail:hover {
+    color: #ee7700;
+    transform: translateY(-2px);
+  }
+  
+  .social-buttons {
+    display: flex;
+    gap: 20px;
+    transform: translateX(-20px); 
+  }
+  
+  .social-buttons a img {
+    width: 45px;
+    transition: transform 0.3s;
+  }
+  
+  .social-buttons a:hover img {
+    transform: scale(1.15);
+  }
+  
+  .footer-bottom {
+    
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff9e;
+    padding: 10px;
+    background-color: #000000;
+    
+   
+   
+  }
+  
+  
+
+
+
+
+
+
+
+  #back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none; /* inizialmente nascosta */
+    background-color: #1b1b1b;
+    color: #f5f5f5;
+    font-size: 24px;
+    padding: 10px 15px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    z-index: 1000;
+  }
+  
+  #back-to-top:hover {
+    background-color: #ee7700;
+    transform: translateY(-2px);
+    color: #ffffff;
+    border-radius: 2px; /* piccolo dettaglio elegante */
+  }
+  
