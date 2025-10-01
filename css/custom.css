@@ -62,7 +62,7 @@
   #hero2 {
     position: relative;
     height: 500px; /* aumenta l'altezza per essere sicura che sia visibile */
-    background-image: url('/img/CUSTOM2.webp'); /* assicurati che il percorso sia corretto */
+    background-image: url('../img/CUSTOM2.webp'); /* assicurati che il percorso sia corretto */
     background-size: cover;
     background-position: center;
     display: flex;
