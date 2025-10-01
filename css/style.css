@@ -1,0 +1,918 @@
+ /* Reset */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Balthazar', serif;
+    color: white;
+     max-width: 100%;
+  overflow-x: hidden!important;
+   
+  }
+
+  /* Navbar */
+  .navbar {
+    position: absolute; /* si sovrappone all’hero */
+    margin-top: 20px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: transparent; /* trasparente sopra l’immagine */
+    z-index: 10; /* sopra l’hero */
+  }
+/* Logo */
+.navbar .logo img {
+  display: block;
+  max-height: 60px;
+}
+
+/* Lista link */
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin-left: auto; /* spinge tutta la lista a destra */
+  padding: 0;
+}
+
+.navbar .nav-links li a {
+  text-decoration: none;
+  color: #fff; /* bianchi per risaltare sopra l’hero */
+  font-weight: 600;
+  font-size: 21px;
+  transition: color 0.3s ease;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5); /* migliora leggibilità */
+}
+
+.navbar .nav-links li a:hover {
+  color:#ee7700; /* effetto elegante hover */
+}
+
+
+
+  /* Hero1 */
+  .hero {
+    position: relative; /* necessario per l'overlay */
+    height: 100vh;
+    background: url('../img/hero.webp') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.713); /* overlay nero semitrasparente */
+    z-index: 1;
+  }
+  
+  .hero img {
+    position: relative;
+    z-index: 2; /* fa sì che il logo stia sopra l'overlay */
+  }
+  .hero-logo {
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  .hero-subtitle {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+
+  
+  
+ 
+
+
+
+
+  
+  /* Contenuto dopo l'hero */
+
+
+
+
+/* Animazione iniziale: traslazione da sinistra + fade-in */
+.chi-sono-anim {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 1s ease-out;
+}
+
+/* Classe attiva quando entra in viewport */
+.chi-sono-anim.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Zoom leggero sulla foto */
+.chi-sono-foto img {
+  transition: transform 1s ease-out, opacity 1s ease-out;
+  opacity: 0.9;
+}
+
+.chi-sono-anim.visible .chi-sono-foto img {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.servizi {
+  padding: 60px 20px;
+  background: #ffffff;
+  color: black;
+ 
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.servizi-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; /* su mobile va a colonna */
+}
+
+.servizi-img {
+  flex: 1;
+}
+
+.servizi-img img {
+  width: 120%;
+ transform: translateX(-60px);
+ 
+}
+
+.servizi-text {
+  flex: 1;
+  transform: translateX(100px);
+  
+}
+
+.servizi-text h2 {
+  font-size: 40px;
+  
+  margin-top: -100px;
+  color: #000000;
+}
+
+.servizi-text ul {
+  list-style-type: square;
+  padding: 0;
+ transform: translateY(5rem);
+ 
+}
+
+
+.servizi-text li {
+  opacity: 0;
+ 
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  margin-bottom: 18px;
+  font-size: 20px;
+}
+
+.servizi-text li.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  #preview-gallery {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #1a1a1a;
+     /* leggero sfondo per staccare dalla hero */
+     
+  }
+  
+  #preview-gallery h2 {
+    font-size: 2rem;
+    margin-top: 100px;
+    color: #ffffff;
+  }
+  
+
+  
+  .preview-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 60px;
+    margin-top: 60px;
+
+  }
+  
+  .preview-images img {
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    
+   
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .preview-images img:hover {
+    transform: scale(1.05);
+   
+  }
+  
+  #preview-gallery .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #ee7700; /* colore del bottone */
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 100px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  #preview-gallery .btn:hover {
+    background-color: #944c03;
+    color: white;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* banner */
+  .banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background: url('../img/banner3.webp') center/cover no-repeat;
+    color: #fff;
+    flex-wrap: wrap;
+  }
+  
+  .banner .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 25, 25, 0.572); /* overlay semitrasparente */
+    z-index: 1;
+  }
+  
+  .banner-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+    z-index: 2;
+  }
+  
+  .banner-left {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .banner-left h1 {
+    font-family: 'Balthazar', serif;
+    font-size: 5rem;
+    margin-bottom: 10px;
+  }
+  
+  .banner-left p {
+    font-size: 20px;
+  }
+  
+  .banner-right {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .banner-right form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .banner-right input,
+  .banner-right textarea {
+    padding: 10px;
+    border: none;
+    
+    width: 70%;
+  }
+  
+  .banner-right button {
+    padding: 12px;
+    border: none;
+    background-color: #ee7700;
+    color: #fff;
+    margin-left: -320px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 90px;
+  }
+  
+  .banner-right button:hover {
+    background-color: #9c3f01;
+  }
+  
+
+
+
+/* Stato iniziale */
+.banner-left,
+.banner-right {
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.banner-left {
+  transform: translateX(-50px); /* parte da sinistra */
+}
+
+.banner-right {
+  transform: translateX(50px); /* parte da destra */
+}
+
+/* Stato finale */
+.banner-left.show,
+.banner-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+  
+
+  /* footer */
+
+  .footer {
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+    font-family: 'Arial', sans-serif;
+    padding: 50px 60px;
+    font-size: 16px;
+    height: 200px;
+  }
+  
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* centra verticalmente logo e contenuti */
+    height: 100%; /* fa sì che occupi tutta l’altezza disponibile */
+  }
+  .footer-left img {
+    height: 160px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+   z-index: 30px;
+  }
+  
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+    margin-right: 30px;
+  }
+  
+  .footer-mail {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s, transform 0.3s;
+    margin-bottom: 20px;
+  }
+  
+  .footer-mail:hover {
+    color: #ee7700;
+    transform: translateY(-2px);
+  }
+  
+  .social-buttons {
+    display: flex;
+    gap: 20px;
+    transform: translateX(-20px); 
+  }
+  
+  .social-buttons a img {
+    width: 45px;
+    transition: transform 0.3s;
+  }
+  
+  .social-buttons a:hover img {
+    transform: scale(1.15);
+  }
+  
+  .footer-bottom {
+    
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff9e;
+    padding: 10px;
+    background-color: #000000;
+    
+   
+   
+  }
+  
+  
+
+
+
+
+
+
+
+  #back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none; /* inizialmente nascosta */
+    background-color: #1b1b1b;
+    color: #f5f5f5;
+    font-size: 24px;
+    padding: 10px 15px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    z-index: 1000;
+  }
+  
+  #back-to-top:hover {
+    background-color: #ee7700;
+    transform: translateY(-2px);
+    color: #ffffff;
+    border-radius: 2px; /* piccolo dettaglio elegante */
+  }
+  
+
+
+
+/* ======================================= */
+/* MEDIA QUERY: Schermi fino a 600px (Mobile) */
+/* FOCUS: Navbar e Hero */
+/* ======================================= */
+@media (max-width: 600px) {
+
+  body{
+    overflow-x: hidden;
+  }
+
+    .navbar .nav-links {
+        /* Mantiene il layout orizzontale come su desktop */
+        flex-direction: row; 
+        gap: 15px; /* Riduce lo spazio tra i link per farli stare */
+        margin-left: auto;
+         /* Assicura che la lista resti a destra */
+    }
+
+    .navbar .nav-links li a {
+        font-size: 13px; /* Riduce la dimensione del font */
+        padding: 0;
+    }
+
+    /* --- Hero --- */
+    .hero {
+  
+        height: 60vh; /* Riduce l'altezza per schermi piccoli */
+        /* display: flex; (già impostato) per centrare il logo */
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .hero img {
+        width: 80px; /* Riduce la dimensione del logo */
+    }
+
+    /* --- Sezione Chi Sono (Stacking Verticale) --- */
+    #chi-sono {
+        /* Forza la visualizzazione a colonna singola */
+      
+        min-height: 300px !important; /* Rimuove l'altezza minima fissa */
+        padding: 0 20px; /* Aggiunge padding laterale generale */
+    }
+
+
+    .chi-sono-testo h1 {
+        /* Riduce la dimensione del titolo */
+        font-size: 30px!important; 
+    }
+    
+    .chi-sono-testo p {
+        font-size: 10px!important;
+    }
+
+  
+    
+    .chi-sono-foto img {
+        width: 100%;
+        height: 100%;
+        
+    }
+
+    #preview-gallery {
+        padding: 40px 10px; /* Riduce il padding generale */
+    }
+    
+    #preview-gallery h2 {
+        margin-top: 50px; /* Assicura un po' di spazio dopo la sezione precedente */
+        margin-bottom: 30px;
+    }
+
+    .preview-images {
+        /* Manteniamo flex-wrap per adattare le immagini */
+        flex-direction: row; 
+        flex-wrap: wrap; /* Permette l'andata a capo */
+        justify-content: center;
+        gap: 15px; /* Riduce lo spazio tra le immagini */
+        margin-bottom: 40px;
+    }
+
+   
+
+    /* Regola specifica per la terza immagine: la forziamo ad andare a capo e centrarla */
+    .preview-images img:nth-child(3) {
+        flex-basis: 100%; /* Forza la terza immagine a occupare tutta la riga */
+        width: 60%; /* Imposta una larghezza più gestibile per centrarla */
+        max-width: 250px;
+        margin: 15px auto 0 auto; /* Centra orizzontalmente e aggiunge spazio sopra */
+        
+    }
+    
+    #preview-gallery .btn {
+        margin-bottom: 50px; /* Riduci il margine inferiore */
+    }
+
+.servizi {
+        padding: 40px 10px; /* Riduce il padding verticale e laterale */
+    }
+    
+    .servizi-content {
+        /* Mantiene il layout orizzontale (row) e permette il wrap in caso */
+        flex-direction: row; 
+        flex-wrap: wrap; /* Assicura che se non c'è spazio, si impili */
+        align-items: flex-start; /* Allinea gli elementi in alto */
+        padding: 0;
+        margin-top: 50px;
+    }
+
+    .servizi-img,
+    .servizi-text {
+        /* Entrambi gli elementi occupano circa il 50% della larghezza */
+        flex: 1 1 calc(50% - 10px); 
+         /* Padding ridotto */
+        /* Rimuove trasformazioni */
+        transform: none !important; 
+    }
+    
+    /* Impostazione ORDINE: FOTO a Sinistra (1), TESTO a Destra (2) */
+    .servizi-img {
+        order: 1; 
+    }
+
+    .servizi-img img {
+        width: 100%; /* L'immagine occupa la larghezza completa del suo 50% */
+        transform: none !important; 
+        height: auto;
+        display: block;
+    }
+
+    .servizi-text {
+        order: 2; 
+    }
+
+    .servizi-text h2 {
+        font-size: 24px; /* Riduce dimensione del titolo */
+        margin-top: 0px; 
+        margin-bottom: 10px;
+        transform: translateX(10px); /* Allinea il titolo a sinistra */
+    }
+    
+    .servizi-text ul {
+        transform: translateY(-25px) !important; 
+         /* Aggiunge padding per i puntini della lista */
+        margin-top: 30px;
+        padding: 20px;
+    }
+
+    .servizi-text li {
+        font-size: 13px; /* Font molto piccolo per farli stare */
+        margin-bottom: 5px;
+        
+        transform: translateY(0) !important;
+        
+    }
+
+.banner {
+        padding: 90px 10px; /* Riduce il padding verticale e laterale */
+    }
+
+    .banner-content {
+        /* Forza la visualizzazione a colonna: Titolo sopra, Form sotto */
+        flex-direction: column;
+        padding: 0 10px; /* Aggiunge padding laterale */
+    }
+
+    .banner-left,
+    .banner-right {
+        /* Piena larghezza per entrambi */
+        flex: 1 1 100%;
+        min-width: 100%;
+        
+        /* Disabilita le animazioni di traslazione per il mobile, forzando la visualizzazione immediata */
+        
+        
+    }
+
+    /* --- Titolo e Sottotitolo (Banner Left) --- */
+    .banner-left {
+        order: 1; /* Mette il titolo per primo */
+        text-align: center;
+        margin-bottom: 20px;
+     
+    }
+    
+    .banner-left h1 {
+        font-size:45px; /* Riduce la dimensione del titolo */
+        margin-bottom: 5px;
+       
+
+    }
+    
+    .banner-left p {
+        font-size: 20px;
+        color: #ffffffc0;
+    }
+
+    /* --- Modulo (Banner Right) --- */
+    .banner-right {
+        order: 2; /* Mette il form sotto il titolo */
+        padding: 0;
+    }
+    
+    .banner-right form {
+        width: 100%;
+        align-items: center; /* Centra i campi */
+        gap: 10px; /* Riduce lo spazio tra i campi */
+    }
+
+    .banner-right input,
+    .banner-right textarea {
+        /* Campi al 100% della larghezza del form (più usabili) */
+        width: 70%; 
+        padding: 12px;
+        box-sizing: border-box; /* Include padding e bordo nella larghezza totale */
+    }
+    
+    .banner-right button {
+        /* Centra il bottone sotto i campi */
+        margin-left: 0; 
+        width: 90%;
+        max-width: 100px; /* Larghezza massima gestibile */
+        padding: 15px;
+        margin-top: 10px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .footer {
+        height: auto; /* L'altezza si adatta al contenuto */
+        padding: 30px 20px; /* Riduce il padding generale */
+    }
+    
+    .footer-top {
+        /* Passa a layout verticale: Logo in alto, Contatti in basso */
+        flex-direction: row;
+        align-items: center; /* Centra gli elementi orizzontalmente */
+        height: auto;
+    }
+
+    /* --- Logo (Footer Left) --- */
+    .footer-left {
+        order: 1; /* Mette il logo per primo */
+        margin-bottom: 20px;
+    }
+    
+    .footer-left img {
+        height: 100px; /* Riduci la dimensione del logo */
+    }
+
+    /* --- Contatti e Social (Footer Right) --- */
+    .footer-right {
+        order: 2; /* Mette i contatti sotto il logo */
+        align-items: center; /* Centra l'email e i social */
+        margin-right: 0; /* Rimuovi il margine a destra */
+        text-align: center;
+    }
+    
+    .footer-mail {
+        font-size: 14px; /* Riduci la dimensione del font dell'email */
+        margin-bottom: 15px; /* Spazio tra email e social */
+    }
+    
+    .social-buttons {
+        gap: 15px; /* Riduci lo spazio tra i social */
+        transform: none; /* Rimuovi la trasformazione */
+    }
+    
+    .social-buttons a img {
+        width: 35px; /* Riduci la dimensione delle icone social */
+    }
+
+    /* --- Footer Bottom (Copyright) --- */
+    .footer-bottom {
+        padding: 10px 20px;
+        font-size: 12px; /* Riduci la dimensione del copyright */
+    }
+
+    /* --- Back to Top Button --- */
+    #back-to-top {
+        bottom: 20px;
+        right: 20px;
+        font-size: 20px;
+        padding: 8px 12px;
+    }
+
+
+
+    
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    /* Inserisci qui le regole per il tablet */
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .navbar .nav-links {
+        gap: 20px; /* Riduce leggermente lo spazio tra i link */
+    }
+    
+    .navbar .nav-links li a {
+        font-size: 19px;
+    }
+
+    /* --- Hero --- */
+    .hero {
+        height: 70vh; 
+    }
+    
+    .hero img {
+        width: 130px; 
+    }
+
+    /* --- Sezione Chi Sono (Layout compatto 60/40) --- */
+    #chi-sono {
+        min-height: 400px;
+    }
+
+   
+    .chi-sono-testo h1 {
+        font-size: 2rem;
+    }
+    
+    .chi-sono-testo p {
+        font-size: 1rem;
+    }
+    
+    /* --- Sezione Gallery (Compatta) --- */
+    .preview-images {
+        gap: 20px;
+    }
+
+    .preview-images img {
+        width: 300px;
+        height: 300px;
+    }
+    
+    /* --- Sezione Servizi (Layout compatto) --- */
+   .servizi-img img{
+    width: 400px;
+    transform: translateX(-20px);
+   }
+    
+    .servizi-text {
+        transform: translateX(-20px); 
+       
+    }
+    
+    .servizi-text h2 {
+        transform: translateY(50px);
+        font-size: 35px;
+    }
+    .servizi-text ul li{
+      font-size: 20px; 
+      width: 500px!important;
+    }
+
+    /* --- Sezione Banner (Richiesta) --- */
+    .banner-left h1 {
+        font-size: 4rem;
+    }
+    
+    .banner-right button {
+        /* Adatta la posizione del bottone del form */
+        margin-left: -150px; 
+    }
+
+    /* --- Footer --- */
+    .footer {
+        padding: 40px 30px;
+    }
+    
+    .footer-left img {
+        height: 140px; 
+    }
+    
+    .footer-right {
+        margin-right: 10px;
+    }
+
+
+    
+}
+
+
+
+
+
+
+
+
+  
