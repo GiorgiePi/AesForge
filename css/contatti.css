@@ -200,7 +200,7 @@
   #gallery-cta {
     position: relative;
     height: 400px; /* regola l'altezza a piacere */
-    background-image: url('/img/view-molten-metal-red-hot-075167956_prevstill.webp'); /* sostituisci con la tua foto */
+    background-image: url('../img/view-molten-metal-red-hot-075167956_prevstill.webp'); /* sostituisci con la tua foto */
     background-size: cover;
     background-position: center;
     display: flex;
