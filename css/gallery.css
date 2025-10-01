@@ -100,7 +100,7 @@
 #hero-gallery {
   position: relative;
   height: 400px;
-  background: url('img/hero-gallery.jpg') center/cover no-repeat;
+  background: url('../img/hero-gallery.jpg') center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
