@@ -230,94 +230,167 @@ body {
 }
 
 
-
-
-
-
-
-
-
-/* CTA PERSONALIZZAZIONE */
-.cta-custom {
-  position: relative;
-  min-height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Sezione lavori */
+.works {
+  background: #1f1f1f;
+  color: var(--text);
+  padding: 200px 0 120px;
   text-align: center;
-  overflow: hidden;
-  color: #fff;
-  background: #000;
+
 }
 
-.cta-custom__overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.7)
-    ),
-    url('../img/pexels-tima-miroshnichenko-5846085.webp') center/cover no-repeat;
-  z-index: 0;
-  transform: scale(1.1);
-  animation: kenburns 14s ease-out forwards;
+.works__title {
+  font-family: "Cinzel", serif;
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 60px;
 }
 
-@keyframes kenburns {
-  0% { transform: scale(1.15); }
-  100% { transform: scale(1.05); }
+.works__gallery {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
 }
 
-.cta-custom__content {
-  position: relative;
-  z-index: 1;
-  padding: 0 1.5rem;
-  max-width: 900px;
-}
-
-.cta-custom__title {
-  font-family: "Cinzel Decorative", serif;
+.work-item {
+ 
+  padding: 8px;
   
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  margin-bottom: 1rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.cta-custom__subtitle {
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
+.work-item img {
+  display: block;
+  width: 300px;
+  height: auto;
 }
 
-.cta-custom__btn {
-  display: inline-block;
-  background-color: #b5652a;
+
+/* Bottone */
+.btn-fucina {
+  background: var(--accent);
   color: #fff;
   text-decoration: none;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  padding: 0.9rem 2.2rem;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 14px 28px;
+  font-family: "Lato";
+  font-weight: 500;
+  transition: background 0.3s ease;
 }
 
-.cta-custom__btn:hover {
+.btn-fucina:hover {
   background: #9b470b;
 }
 
-/* effetto scintilla */
-.cta-custom__btn::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -150%;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(110deg, transparent 0%, rgba(255,255,255,0.3) 45%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0.3) 55%, transparent 100%);
-  transform: skewX(-20deg);
-  animation: shimmer 3.5s ease-in-out infinite;
+/* ============================= */
+/*     Animazioni scroll        */
+/* ============================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  will-change: opacity, transform;
 }
+
+.reveal.in-view {
+  animation: fadeUp 1s ease-out forwards;
+  animation-delay: var(--d, 0s);
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== FAQ ========== */
+.faq {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 6rem 8%;
+  font-family: "Lato", sans-serif;
+}
+
+.faq__wrap {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq__title {
+  font-family: "Cinzel", serif;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  margin-bottom: 3rem;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.faq__item {
+  border-bottom: 1px solid rgba(181, 101, 42, 0.4);
+  padding: 1.2rem 0;
+}
+
+.faq__question {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #b5652a;
+  font-family: "Cinzel", serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.03em;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.25s ease;
+}
+
+.faq__question:hover {
+  color: #d57b3b;
+}
+
+.faq__icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.25s ease;
+}
+
+.faq__answer {
+  display: none;
+  padding-top: 0.8rem;
+  color: #ccc;
+  font-weight: 300;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.faq__item.active .faq__answer {
+  display: block;
+}
+
+.faq__item.active .faq__icon {
+  transform: rotate(180deg);
+}
+
+/* spacing + reveal compatibilità */
+.faq__item.reveal {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.faq__item.in-view {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+
+
+
+
 
 
 
@@ -460,4 +533,226 @@ body {
   vertical-align: middle;
   fill: #b5652a;
   margin-right: 6px;
+}
+
+
+
+
+
+
+@media (max-width: 600px) {
+
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* ===== Navbar ===== */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.588);
+  backdrop-filter: blur(6px);
+  padding: 15px 0;
+  z-index: 10;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+ padding: 5px;
+}
+
+.navbar a {
+  color: #F6F6F6;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 17px;
+  transition: color 0.3s;
+  font-family: "Lato";
+ 
+}
+ 
+
+
+ 
+  /* ===== Hero ===== */
+  .hero {
+    height: 50vh;
+    background-position: center;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .hero h1 { font-size: 2rem; }
+
+
+ 
+
+  /* ===== Sezione Contatti ===== */
+  .contact {
+    padding: 4rem 1.2rem;
+  }
+
+  .contact__intro {
+    font-size: 1rem;
+    margin-bottom: 4rem;
+    padding: 0 0.5rem;
+  }
+
+  /* ===== Box contenitore ===== */
+  .contact__wrap {
+    padding: 2rem 1.2rem;
+    max-width: 100%;
+  }
+
+  /* ===== Blocco in alto (email + instagram) ===== */
+  .contact__top {
+    flex-direction: column;
+    gap: 1.2rem;
+    padding-bottom: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact__info {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .contact__icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .contact__info a {
+    font-size: 0.95rem;
+    word-break: break-word;
+  }
+
+  /* ===== Form ===== */
+  .contact__form {
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .contact__form label {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .contact__form input,
+  .contact__form textarea {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 0.75rem;
+  }
+
+  .contact__form textarea {
+    height: 130px;
+  }
+
+  /* ===== Bottone ===== */
+  .contact__btn {
+    width: 100%;
+    max-width: 100px;
+    padding: 0.7rem;
+    font-size: 1rem;
+    margin-top: 1.2rem;
+  }
+
+
+
+
+/* ===== Lavori ===== */
+  .works {
+    padding: 120px 0 80px;
+  }
+
+  .works__gallery {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .work-item img {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .works__title { font-size: 1.3rem; }
+
+  .btn-fucina{
+    font-size: 0.8rem;
+  }
+
+
+
+
+  .faq__title{
+    font-size: 1.3rem;
+  }
+  .faq__question{
+    font-size: 12px;
+  }
+  .faq__answer{
+    font-size: 11px;
+  }
+
+ 
+  /* ===== Footer ===== */
+  .footer__top {
+    flex-direction:column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+   
+  }
+
+  .footer__icon {
+    transform: none;
+    margin: 0 auto 1rem; 
+    margin-top: 40px;
+  }
+
+  .footer__title,
+  .footer__desc {
+    text-align: center;
+    margin: 0;
+  }
+
+  .footer__links {
+    border: none;
+    padding: 1rem 0;
+    height: auto;
+    margin-top: 30px;
+  }
+
+  .footer__links ul {
+    text-align: center;
+  }
+
+  .footer__links a {
+    margin-bottom: 10px;
+  }
+ 
+
+  .footer__contact {
+    margin: 1.5rem 0 0;
+    text-align: center;
+  }
+
+  .footer__mail,
+  .footer__social {
+    justify-content: center;
+    
+  }
+
+  .footer__bottom {
+    padding: 0.8rem;
+    font-size: 0.75rem;
+  }
 }

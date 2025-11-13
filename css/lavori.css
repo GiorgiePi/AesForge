@@ -444,3 +444,190 @@ body {
   fill: #b5652a;
   margin-right: 6px;
 }
+
+
+
+@media (max-width: 600px) {
+
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* ===== Navbar ===== */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.588);
+  backdrop-filter: blur(6px);
+  padding: 15px 0;
+  z-index: 10;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+ padding: 5px;
+}
+
+.navbar a {
+  color: #F6F6F6;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 17px;
+  transition: color 0.3s;
+  font-family: "Lato";
+ 
+}
+ 
+
+
+ 
+  /* ===== Hero ===== */
+  .hero {
+    height: 50vh;
+    background-position: center;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .hero h1 { font-size: 2rem; }
+
+
+ 
+
+
+
+
+
+
+/* ---- Filtri ---- */
+  .gallery__filters {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap; /* così non escono dallo schermo */
+    margin-bottom: 2rem;
+  }
+
+  .filter-btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.84rem;
+    margin-bottom: 30px;
+    
+ 
+  }
+
+  /* ---- Griglia immagini ---- */
+  .gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 per riga */
+    gap: 1rem;
+    justify-items: center;
+  }
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  /* ===== Personalizzazione ===== */
+  .custom__grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .custom-card {
+    height: auto;
+    padding: 28px 20px;
+  }
+
+  .custom-card__title {
+    margin-bottom: 40px;
+  }
+
+  .custom__title { font-size: 1.8rem; }
+
+  /* ===== CTA ===== */
+  .cta-custom {
+    min-height: 60vh;
+    padding: 80px 20px;
+  }
+
+  .cta-custom__title {
+    font-size: 1.5rem;
+  }
+
+  .cta-custom__subtitle {
+    font-size: 0.8rem;
+  }
+
+  .cta-custom__btn {
+    padding: 0.8rem 2rem;
+    font-size: 0.8rem;
+  }
+
+  /* ===== Footer ===== */
+  .footer__top {
+    flex-direction:column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+   
+  }
+
+  .footer__icon {
+    transform: none;
+    margin: 0 auto 1rem; 
+    margin-top: 40px;
+  }
+
+  .footer__title,
+  .footer__desc {
+    text-align: center;
+    margin: 0;
+  }
+
+  .footer__links {
+    border: none;
+    padding: 1rem 0;
+    height: auto;
+    margin-top: 30px;
+  }
+
+  .footer__links ul {
+    text-align: center;
+  }
+
+  .footer__links a {
+    margin-bottom: 10px;
+  }
+ 
+
+  .footer__contact {
+    margin: 1.5rem 0 0;
+    text-align: center;
+  }
+
+  .footer__mail,
+  .footer__social {
+    justify-content: center;
+    
+  }
+
+  .footer__bottom {
+    padding: 0.8rem;
+    font-size: 0.75rem;
+  }
+}
